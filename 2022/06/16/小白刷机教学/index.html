@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>小白刷机教学 | 晓的博客</title><meta name="author" content="晓😀"><meta name="copyright" content="晓😀"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="关于刷Magisk、Xposed教程by Tung   东澈_Wizard 本教程支持所有机型，教学以Vab机型为主，也就是小米11之后的所有小米手机。小米11之前的机型只有一点与本教程不同，下方有详细说明。（详细请往下看）造成任何后果概不负责。 本文所有文件链接在正文里会做出一些处理，直链请看评论区置顶。 硬件准备: 1.电脑一台； 2.手机一台； 3.能够传输数据的数据线一根（很重要）； 4.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小白刷机教学">
+<meta property="og:url" content="http://ikunxiao.top/2022/06/16/%E5%B0%8F%E7%99%BD%E5%88%B7%E6%9C%BA%E6%95%99%E5%AD%A6/index.html">
+<meta property="og:site_name" content="晓的博客">
+<meta property="og:description" content="关于刷Magisk、Xposed教程by Tung   东澈_Wizard 本教程支持所有机型，教学以Vab机型为主，也就是小米11之后的所有小米手机。小米11之前的机型只有一点与本教程不同，下方有详细说明。（详细请往下看）造成任何后果概不负责。 本文所有文件链接在正文里会做出一些处理，直链请看评论区置顶。 硬件准备: 1.电脑一台； 2.手机一台； 3.能够传输数据的数据线一根（很重要）； 4.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.pexels.com/photos/12361807/pexels-photo-12361807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+<meta property="article:published_time" content="2022-06-15T21:14:10.000Z">
+<meta property="article:modified_time" content="2022-06-15T21:14:49.114Z">
+<meta property="article:author" content="晓😀">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/12361807/pexels-photo-12361807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://ikunxiao.top/2022/06/16/%E5%B0%8F%E7%99%BD%E5%88%B7%E6%9C%BA%E6%95%99%E5%AD%A6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小白刷机教学',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-16 05:14:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tc.phpx.cn/uploads/2022/04/01/6246f346256bb.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清單</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/12361807/pexels-photo-12361807.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">晓的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清單</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">小白刷机教学</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-15T21:14:10.000Z" title="发表于 2022-06-16 05:14:10">2022-06-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-15T21:14:49.114Z" title="更新于 2022-06-16 05:14:49">2022-06-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="小白刷机教学"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>刷Magisk、Xposed教程by Tung   东澈_Wizard</p>
+<p>本教程支持所有机型，教学以Vab机型为主，也就是小米11之后的所有小米手机。小米11之前的机型只有一点与本教程不同，下方有详细说明。（详细请往下看）造成任何后果概不负责。</p>
+<p>本文所有文件链接在正文里会做出一些处理，直链请看评论区置顶。</p>
+<p>硬件准备:</p>
+<p>1.电脑一台；</p>
+<p>2.手机一台；</p>
+<p>3.能够传输数据的数据线一根（很重要）；</p>
+<p>4.勤快的手和聪慧的脑子（更加重要）。</p>
+<p>二、    软件准备（电脑）: <a target="_blank" rel="noopener" href="https://androidhub.lanzoui.com/b010zrcsj">https://androidhub.lanzoui.com/b010zrcsj</a>   米玛:tung</p>
+<p>1.下载miflash_unlock-5.5.224.55.zip</p>
+<p>2.下载ADB工具包By Tung.zip</p>
+<p>3.下载MiFlash2020-3-14-0（带9008 mode）.zip</p>
+<p>4.下载Payload_dumper-win64.zip</p>
+<p><img src="001.png"></p>
+<p>5.下载当前系统版本的ROM包（卡刷包或者线刷包都可以）</p>
+<p>//一定要确保是当前系统版本的rom包，否则wifi蓝牙打不开。*/</p>
+<p>6.ROM下载网址:<a target="_blank" rel="noopener" href="https://xiaomirom.com/">https://xiaomirom.com/</a></p>
+<p><img src="002.png"></p>
+<p>7.解压文件并把他们放到同一个文件夹内:</p>
+<p>miflash_unlock-5.5.224.55.zip</p>
+<p>ADB工具包By Tung.zip</p>
+<p>MiFlash2020-3-14-0（带9008 mode）.zip</p>
+<p>Payload_dumper-win64.zip</p>
+<p>并且解压卡刷包或者线刷包，卡刷包只需要解压一遍，线刷包需要解压两遍（不是Linux环境的话）线刷包和卡刷包只需要其一就行。</p>
+<p><img src="003.png"></p>
+<p>三、    文件准备（手机）:  htt删ps://androidhub.lan删zoui.co删m/b010zrhqh  米玛:tung</p>
+<p>现在所有机型都可以刷23015Alpha以后的公版面具了。不出意外，这个面具支持99.9%的机型。<br>下载地址:<a target="_blank" rel="noopener" href="https://androidhub.lanzoul.com/iPfPE01lj18b">https://androidhub.lanzoul.com/iPfPE01lj18b</a></p>
+<ol>
+<li>   面具下载并安装！<br>(k40g，n10p面具是来自酷安大佬@响當當 的安装包，不过现在上方那个24200版本的magisk已经支持所有机型了，没必要用专用面具了)</li>
+</ol>
+<p>面具版本选择（重要):<br>Release稳定，只适应于安卓11及以下。<br>Alpha，Canary可能不稳定，但适应于安卓12及以下。（除了n10p和k40g的其他机型切记是不能用专用版的面具，要下载适应自己机型的面具，一般高通机型下载23015以上的公版的面具即可。）</p>
+<ol start="2">
+<li><p>   下载riru-v26.1.3.zip</p>
+</li>
+<li><p>   下载LSPosed-v1.6.2-(6152)-正式版.zip</p>
+</li>
+</ol>
+<p><img src="004.png"></p>
+<p>四、    刷面具Magisk教程:</p>
+<ol>
+<li>   安装驱动:</li>
+</ol>
+<p>①    打开miflash文件</p>
+<p><img src="005.png"></p>
+<p>②    打开miflash.exe</p>
+<p><img src="006.png"></p>
+<p>③    点driver</p>
+<p><img src="007.png"></p>
+<p>④    点安装。</p>
+<p><img src="008.png"></p>
+<ol start="2">
+<li>   解锁Bootloader</li>
+</ol>
+<p>申请解锁网址:<a target="_blank" rel="noopener" href="http://www.miui.com/unlock/index.html">http://www.miui.com/unlock/index.html</a></p>
+<p>（官方给了详细的解锁方法，此教程不展示）</p>
+<ol start="3">
+<li><p>   在手机上安装magisk.apk</p>
+</li>
+<li><p>   提取boot.img（线刷包方法，如果你下载的是卡刷包请看5.）</p>
+</li>
+</ol>
+<p>①    打开线刷包文件夹</p>
+<p><img src="009.png"></p>
+<p>②打开images</p>
+<p><img src="010.png"></p>
+<p>③    找到boot.img并将其复制</p>
+<p><img src="011.png"></p>
+<p>④    将boot.img复制到ADB工具包路径下</p>
+<p><img src="012.png"></p>
+<ol start="5">
+<li>   提取boot.img（卡刷包方法，如果你下载的是线刷包请看4.）</li>
+</ol>
+<p>①    打开卡刷包文件夹</p>
+<p><img src="013.png"></p>
+<p>②    将文件下的payload.bin复制。</p>
+<p><img src="014.png"></p>
+<p>③    将payload.bin复制到\Payload_dumper-win64\payload_input</p>
+<p><img src="015.png"></p>
+<p>④    打开payload_dumper.exe</p>
+<p><img src="016.png"></p>
+<p>⑤    等待命令符程序跑完（其实可以提前结束，小白把握不好结束时间不要自己贸然结束）</p>
+<p><img src="017.png"><br>                  这里不是卡住了,是因为system镜像太大了，需要更长的时间。</p>
+<p>⑥    打开路径\Payload_dumper-win64\payload_output将boot.img复制。</p>
+<p><img src="018.png"></p>
+<p>⑦    将boot.img复制到ADB工具包路径下</p>
+<p><img src="019.png"></p>
+<ol start="6">
+<li>   修补boot.img</li>
+</ol>
+<p>①    将boot.img传回手机，并专门放到一个你知道的文件夹内:</p>
+<p>如果你用的是QQ传回的文件，</p>
+<p>QQ下载路径Android/data/com.tencent.mobileqq/Tencent/QQfile_recv</p>
+<p>②    打开magisk 面具点安装。</p>
+<p><img src="020.png"></p>
+<p>③    点选择并修补一个文件（不root没有直接安装和OTA后的选项，不要紧）</p>
+<p><img src="021.png"></p>
+<p>④    找到从电脑传到手机的boot.img并选择：</p>
+<p><img src="022.png"></p>
+<p>⑤    然后点开始，等安装完后，记住划线的路径。</p>
+<p><img src="023.png"><br>                                就是在非Root的根目录下，找Download/（后面根据屏幕上的路径）<br><img src="024.png"><br>⑥    进入划线的路径找到magisk_patch-23000_xxxxxxx.img这个文件，并传到电脑上。</p>
+<p><img src="025.png"></p>
+<p>⑦    把magisk_patch-23000_xxxxxxx.img移动到ADB工具包路径下。</p>
+<p><img src="026.png"></p>
+<p>⑧    把magisk_patch-23000_xxxxxxx.img重命名为magisk.img。</p>
+<p><img src="027.png"></p>
+<ol start="7">
+<li>   刷入magisk:</li>
+</ol>
+<p>①    首先，用一根数据线将手机与电脑连接。</p>
+<p>②    手机关机，等关机后，按住音量下键+电源键，过5s左右，会进入fastboot mode.</p>
+<p><img src="028.png"></p>
+<p>③    在ADB工具包里打开   打开命令符(cmd环境).bat</p>
+<p><img src="029.png"></p>
+<p>④    在弹出来的命令窗口输入fastboot devices并回车。</p>
+<p>当显示xxxxxxxxxxx  fastboot即为正常，若不显示，则检查数据线和手机，电脑驱动等。</p>
+<p><img src="030.png"></p>
+<p>⑤    再输入fastboot flash boot_a magisk.img并回车。</p>
+<p><img src="032.png"></p>
+<p>⑦    再输入fastboot reboot并回车。</p>
+<p><img src="034.png"></p>
+<p>⑧    等手机开机就好了，第一次开机可能有点慢，但不会超过5min。</p>
+<p>此时出现下面的界面，就成功安装magisk了。</p>
+<p><img src="035.png"></p>
+<p>8,.刷入xposed:</p>
+<p>①    打开面具，点从本地安装。</p>
+<p><img src="036.png"></p>
+<p>②    找到之前下载的这两个文件，并选择riru-26.1.3.zip。</p>
+<p><img src="037.png"></p>
+<p>③    出现下方界面后，退出回到面具app。</p>
+<p><img src="038.png"></p>
+<p>④    同理再选择LSPosed-v1.6.3.zip安装，再点右下角的重启。</p>
+<p>⑤    这样Lsposed也安装成功了。</p>
+<p><img src="039.png"></p>
+<p>五，以后如何升级系统？</p>
+<p>方法一:和往常一样升级系统，但升级完系统面具会消失。可以再按照本文步骤重新安装一遍面具。</p>
+<p>方法二:<br>该方法效果非常好，不会掉面具，重启后也不用自己再重新刷一遍面具。（但是，但是，有时候特别是大版本更新时，会有一定的风险，如果担不起这个风险，请老老实实用方法一）<br>1，下载系统更新包，等出现  立即重启  按钮先不要重启。</p>
+<p><img src="040.png"></p>
+<p>2，进入面具，点击安装。</p>
+<p><img src="041.png"></p>
+<p>3，点击 OTA后，再点 开始。</p>
+<p><img src="042.png"></p>
+<p>4，等跑完这个界面，点重启即可。</p>
+<p><img src="043.png"></p>
+<p>六，出现的问题及解决方式:</p>
+<p>①<br>Q:蓝牙和WiFi打不开<br>A:请看第二大项第5条。一定要下载自己正在使用的MIUI版本的ROM包，否则就会造成boot不对应，从而导致蓝牙WiFi打不开。</p>
+<p>②<br>Q:在一屏无限重启。<br>A:这个会有多个原因，比如刷错面具版本，刷错boot版本或者  没有过验证。<br>救砖解决方案:<br>1，在ADB工具包下打开命令符（cmd环境）.bat</p>
+<p><img src="044.png"></p>
+<p>2，输入fastboot devices并回车。</p>
+<p>当显示xxxxxxxxxxx  fastboot即为正常，若不显示，则检查数据线和手机，电脑驱动等。</p>
+<p><img src="045.png"></p>
+<p>3，输入fastboot flash boot_a boot.img并回车</p>
+<p><img src="046.png"></p>
+<p>4，输入fastboot flash boot_b boot.img</p>
+<p><img src="047.png"></p>
+<p>5，输入fastboot reboot并回车</p>
+<p><img src="048.png"></p>
+<p>如果还不行，请检查ROM版本是否一致。（本文第n遍）</p>
+<p>Q:我为啥不专门做一个bat一键root工具呢？<br>A:我想用这个详细流程让初入膏🐔圈的朋友们了解一下刷面具的流程（当然这不是唯一一种方法），自己多操作几遍，自己也就懂怎么刷面具了，遇到一些问题也可以自己解决了。我不止看到一个小白因为刷面具刷错了Boot，结果送到售后换了主板，白花了那么多的冤枉钱。希望初入🐔圈的朋友们可以快速成长，融入我们这个大家庭</p>
+<p>技术交流指导群<br>本群提供小白指导，搞机技术交流<br>指导安装ROOT、类原生、移植系统、调教系统<br>刷机解锁、联发科强解、双系统安装<br>基础知识讲解，视频教程辅导<br>交流搞机设置心德、分享日常生活吹水<br>分享模块等搞机资源</p>
+<p>①群：878743597<br>②群: 701566231</p>
+<p>注:<br>二群刚刚开放，正在招募管理四位，有意可私聊群主</p>
+<p>请在提问时有礼貌尊重他人，若墨迹、一直at，直接踢出，本群无义务服务，尊重他人赢得好感可快速得到回复</p>
+<p>刷类原生或系统调教，群主、管理可进行付费指导(费用在一杯奶茶中，穷不了你富不了我)</p>
+<p>本群并非死板科技话题，可分享日常与群友吹水聊天，或为群内提提意见，本群是有温度的群</p>
+<p>本群除一群外其他群管理员均非固定职位，看表现上下任(包括后期将开放的群聊)</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://ikunxiao.top">晓😀</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://ikunxiao.top/2022/06/16/%E5%B0%8F%E7%99%BD%E5%88%B7%E6%9C%BA%E6%95%99%E5%AD%A6/">http://ikunxiao.top/2022/06/16/%E5%B0%8F%E7%99%BD%E5%88%B7%E6%9C%BA%E6%95%99%E5%AD%A6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ikunxiao.top" target="_blank">晓的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://images.pexels.com/photos/12361807/pexels-photo-12361807.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/06/16/hello-world/"><img class="next-cover" src="https://tc.phpx.cn/uploads/2022/06/14/lPdvv7m2jJ.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tc.phpx.cn/uploads/2022/04/01/6246f346256bb.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">晓😀</div><div class="author-info__description">无聊</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E"><span class="toc-number">1.</span> <span class="toc-text">关于</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/16/%E5%B0%8F%E7%99%BD%E5%88%B7%E6%9C%BA%E6%95%99%E5%AD%A6/" title="小白刷机教学"><img src="https://images.pexels.com/photos/12361807/pexels-photo-12361807.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小白刷机教学"/></a><div class="content"><a class="title" href="/2022/06/16/%E5%B0%8F%E7%99%BD%E5%88%B7%E6%9C%BA%E6%95%99%E5%AD%A6/" title="小白刷机教学">小白刷机教学</a><time datetime="2022-06-15T21:14:10.000Z" title="发表于 2022-06-16 05:14:10">2022-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/16/hello-world/" title="Hello World"><img src="https://tc.phpx.cn/uploads/2022/06/14/lPdvv7m2jJ.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/06/16/hello-world/" title="Hello World">Hello World</a><time datetime="2022-06-15T20:25:14.571Z" title="发表于 2022-06-16 04:25:14">2022-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/12/%E4%B8%80%E4%BA%9B%E9%93%BE%E6%8E%A5/" title="一些链接"><img src="https://images.pexels.com/photos/12004363/pexels-photo-12004363.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一些链接"/></a><div class="content"><a class="title" href="/2022/06/12/%E4%B8%80%E4%BA%9B%E9%93%BE%E6%8E%A5/" title="一些链接">一些链接</a><time datetime="2022-06-12T04:57:47.000Z" title="发表于 2022-06-12 12:57:47">2022-06-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 晓😀</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
